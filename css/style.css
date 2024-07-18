@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;1,600&display=swap');
+
+:root {
+    --cor-primaria: #532F28;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #F5D877;
+    --cor-quaternaria: #8A4D41;
+    --cor-hover: #201e1e;
+    --fonte-primaria: "Do Hyeon", sans-serif;
+    --fonte-secundaria: "Lato", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--cor-quaternaria);
+}
+
+.header, .header_projetos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--cor-primaria);
+}
+
+.header_projetos {
+    background-color: var(--cor-quaternaria);
+}
+
+.logo_nome, .logo_nome_menor {
+    margin: 4% 0 0 50%;
+    width: 100%;
+}
+
+.navegacao, .navegacao_habilidades {
+    display: flex;
+    gap: 2rem;
+    margin-right: 5%;
+}
+
+.navegacao a, .navegacao_habilidades a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--fonte-primaria);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+
+.link_menu:hover {
+    transform: scale(1.06);
+    position: relative;
+}
+
+.link_menu:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor-terciaria);
+    position: absolute;
+    bottom: -7px;
+}
+
+.link_menu img {
+    width: 1.6rem;
+}
+
+.conteudo_principal, .conteudo_principal_habilidades, .conteudo_principal_projetos {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo_principal_projetos {
+    background-color: var(--cor-primaria);
+}
+
+.secao_apresentacao {
+    display: flex;
+    justify-content: space-between;
+    gap: 6.5rem;
+    margin: 12% 10%;
+}
+
+.conteudo_apresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.titulo_cumprimento {
+    font-family: "Exo 2", sans-serif;
+    color: var(--cor-terciaria);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.conteudo_titulo_apresentacao {
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+    letter-spacing: 0.6rem;
+}
+
+.titulo_apresentacao, .titulo_secao_conteudo, .titulo_secao_sobre_mim, .titulo_apresentacao_habilidades, .titulo_apresentacao_projetos {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    overflow: hidden;
+    border-right: 2px solid var(--cor-terciaria);
+    animation: typing 5s steps(12, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    25% { width: 50%; }
+    50% { width: 90%; }
+    75% { width: 90%; }
+    100% { width: 0; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--cor-terciaria); }
+}
+
+.titulo_secao_conteudo, .titulo_secao_sobre_mim, .titulo_apresentacao_habilidades {
+    animation: none;
+    border-right: none;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.titulo_apresentacao_projetos {
+    margin-top: -5%;
+    margin-left: -10%;
+    text-align: start;
+    animation: none;
+    border-right: none;
+}
+
+.destaque_nome {
+    color: var(--cor-terciaria);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.texto_apresentacao, .texto_secao_conteudo, .texto_apresentacao_projetos {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5em;
+    color: var(--cor-secundaria);
+    font-weight: 400;
+    line-height: 2.5rem;
+    letter-spacing: 0.01em;
+}
+
+.texto_apresentacao_projetos {
+    margin-left: -10%;
+}
+
+.link_apresentacao, .projeto_info h4 {
+    margin-top: -3%;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+    margin-left: -10%;
+}
+
+.projetos {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-left: 6%;
+    margin-top: -6%;
+}
+
+.projeto_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto_item img, .projetos_item img {
+    margin-bottom: 8%;
+    transition: transform 0.3s
+}
+
+.projeto_item img:hover, .projetos_item img:hover {
+    transform: scale(1.04);
+}
+
+.projeto_info {
+    text-align: center;
+}
+
+.projeto_info h4 {
+    font-size: 1.2rem;
+    color: var(--cor-terciaria);
+    margin-bottom: 3%;
+}
+
+.projeto_info p {
+    font-size: 1rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    color: var(--cor-secundaria);
+    margin-bottom: 50%;
+    line-height: 1.3rem;
+}
+
+.links_apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    margin-left: 16%;
+}
+
+.titulo_links_redes, .informacao_contato, .sistemas_operacionais h4, .habilidades h4 {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.link_rede, .botao_certificado {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 4.5%;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-secundaria);
+    font-weight: 400;
+    line-height: 2.25rem;
+    text-decoration: none;
+}
+
+.link_rede:hover, .botao_certificado:hover {
+    transform: scale(1.05);
+    color: var(--cor-terciaria);
+    transition: transform 0.2s ease-in-out;
+}
+
+.imagem_apresentacao {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.secao_sobre_mim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    gap: 0.6rem;
+}
+
+.titulo_principal_secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7% 0 8%;
+}
+
+.titulo_secao_sobre_mim {
+    font-family: "Exo 2", sans-serif;
+    color: var(--cor-secundaria);
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 0.3rem;
+    border-bottom: 3px solid var(--cor-secundaria);
+    margin-bottom: -80px;
+}
+
+.conteudo_principal_secao {
+    display: flex;
+    gap: 6.67%;
+    margin-bottom:13.33%;
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+.conteudo_principal_foto {
+    margin-top: -3%;
+    margin-left: -80px;
+    width: 190%;
+}
+
+.conteudo_secao_sobre_mim {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+    gap: 1.25rem;
+}
+
+.titulo_secao_conteudo {
+    font-size: 1.8rem;
+    text-align: start;
+    border-right: none; 
+}
+
+.texto_secao_conteudo {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+
+.conteiner_habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.habilidades_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5.6rem;
+}
+
+.sistemas_operacionais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icones_sistemas_operacionais {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+}
+
+.icones_sistemas_operacionais img {
+    width: 2.5rem;
+}
+
+.sistemas_operacionais h4, .habilidades h4 {
+    font-size: 1.2rem;
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icones_habilidades {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 2%;
+}
+
+.icones_habilidades img { 
+    width: 1.8rem;
+}
+
+.informacao_contato {
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+
+.botao_certificado {
+    width: 50%;
+    padding: 1.7%;
+    margin-top: 2%;
+    background-color: var(--cor-primaria);
+}
+
+.rodape, .rodape_habilidades {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+    border-top: 3px solid var(--cor-terciaria);
+    background-color: var(--cor-quaternaria);
+}
+
+.rodape_habilidades {
+    background-color: var(--cor-primaria);
+}
+
+.logo_rodape {
+    width: 10%;
+    margin: 1% 0;
+}
+
+.autoria_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.autoria {
+    font-size: 1rem;
+    font-family: var(--fonte-secundaria);
+    color: #B9B9B9;
+    font-weight: 400;
+    line-height: 2.25rem ;
+    margin-right: 0.4rem;
+}
+
+.autoria_flex img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+    .header, .header_projetos {
+        display: flex;
+        justify-content: flex-start;
+        position: fixed;
+        height: 3.4rem;
+    }
+    
+    .logo_nome, .logo_nome_menor {
+        margin: 4% 0 0 25%;
+        width: 75%;
+    }
+
+    .logo_nome_menor {
+        width: 50%;
+        margin-left: 15%;
+    }
+
+    .navegacao, .navegacao_habilidades {
+        margin-left: 6%;
+        gap: 0.3rem;
+    }
+
+    .navegacao_habilidades {
+        gap: 0.8rem;
+    }
+
+    .navegacao a, .navegacao_habilidades a {
+        gap: 0.2rem;
+        font-size: 0.55rem;
+    }
+
+    .link_menu img {
+        width: 0.5rem;
+    }
+
+    .link_menu:hover {
+        transform: scale(1.03);
+    }
+
+    .link_menu:hover::after {
+        height: 1.2px;
+        bottom: -2px;
+    }
+
+    .secao_apresentacao {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .imagem_apresentacao {
+        margin-top: 20%;
+    }
+
+    .titulo_cumprimento{
+        margin-top: -30%;
+        font-size: 1.2rem;
+    }
+
+    .titulo_apresentacao {
+        font-size: 1.1rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .titulo_apresentacao_habilidades, .titulo_apresentacao_projetos {
+        font-size: 0.7rem;
+        line-height: 0.9rem;
+        margin-top: 20%;
+        margin-bottom: -25%;
+        letter-spacing: 0.1rem;
+    }
+
+    @keyframes typing {
+        0% { width: 0; }
+        25% { width: 50%; }
+        50% { width: 100%; }
+        75% { width: 100%; }
+        100% { width: 0; }
+    }
+    
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: var(--cor-terciaria); }
+    }
+
+    .texto_apresentacao {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+    }
+
+    .links_apresentacao {
+        gap: 1rem;
+        margin-left: -2%;
+    }
+
+    .links_apresentacao a {
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    .links_apresentacao img {
+        width: 18%;
+        margin-right: -4%;
+    }
+
+    .titulo_links_redes {
+        font-size: 1rem;
+    }
+
+    .conteudo_principal_secao {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .titulo_secao_sobre_mim {
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+        margin-bottom: 10%;
+    }
+
+    .conteudo_principal_foto {
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .titulo_secao_conteudo {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        line-height: 1.3rem;
+        margin-top: 10%;
+    }
+
+    .texto_secao_conteudo {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    .habilidades_flex {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .icones_habilidades, .icones_sistemas_operacionais {
+        display: flex;
+        justify-content: center;
+    }
+
+    .icones_sistemas_operacionais {
+        margin-right: 15%;
+    }
+
+    .sistemas_operacionais h4, .habilidades h4{
+        font-size: 1rem;
+    }
+
+    .icones_sistemas_operacionais img {
+        width: 14%;
+    }
+
+    .habilidades {
+        margin-top: -30%;
+        margin-bottom: 6%;
+        margin-right: 15%;
+    }
+
+    .icones_habilidades img {
+        width: 12%;
+    }
+
+    .informacao_contato {
+        font-size: 1rem;
+        letter-spacing: 0.01rem;
+        line-height: 1.5rem;
+        margin-right: 8%;
+    }
+
+    .botao_certificado {
+        margin-top: 6%;
+        margin-left: 15%;
+        font-size: 1rem;
+        width:60%;
+    }
+    
+    .botao_certificado img {
+        margin-right: -4%;
+        width: 25%;
+    }
+
+    .logo_rodape {
+        width: 24%;
+    }
+
+    .autoria_flex {
+        margin-left: 4%;
+    }
+
+    .autoria {
+        font-size: 0.55rem;
+        line-height: 1rem;
+    }
+
+    .autoria_flex img {
+        width: 70%;   
+    }
+
+    .conteudo_principal_habilidades {
+        margin-bottom: 120%;
+    }
+    
+    .conteudo_principal_projetos, .projetos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titulo_apresentacao_projetos {
+        margin-top: 20%;
+        line-height: 90%;
+        font-size: 1.3rem;
+    }
+
+    .texto_apresentacao_projetos {
+        margin-top: 25%;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .link_apresentacao {
+        font-size: 0.7rem;
+        margin-bottom: 10%;
+    }
+
+    .projeto_info {
+       margin-bottom: -30%;
+    }
+
+    .projeto_item img, .projetos_item img {
+        width: 100%;
+    }
+
+    .projeto_item img:hover, .projetos_item img:hover {
+        transform: none;
+    }
+    
+}
+
