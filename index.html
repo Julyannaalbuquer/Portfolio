@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="icon" href="./assets/certificados.svg">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body> 
+    <header class="header"> 
+        <a href="index.html"><img class="logo_nome" src="./assets/my_name.svg" alt="Meu nome"></a>  
+        <nav class="navegacao">     
+            <a class="link_menu" href="index.html"><img src="./assets/home.svg" alt="Home">Home</a>
+            <a class="link_menu" href="#sobre_mim"><img src="./assets/sobre_mim.svg" alt="Sobre mim">Sobre Mim</a>
+            <a class="link_menu" href="skills.html"><img src="./assets/habilidades.svg" alt="Habilidades">Habilidades</a>
+            <a class="link_menu" href="projetos.html"><img src="./assets/projetos.svg" alt="Projetos">Projetos</a>
+        </nav>
+    </header>
+
+    <main class="conteudo_principal">
+        <section class="secao_apresentacao">
+            <div class="conteudo_apresentacao">
+                <h2 class="titulo_cumprimento">Hi, It's me 👋</h2>
+
+                <div class="conteudo_titulo_apresentacao">
+                    <h1 class="titulo_apresentacao">Julyanna <strong class="destaque_nome"> Albuquerque</strong></h1>
+                </div>
+                <p class="texto_apresentacao">
+                    Olá! Sou a Ju! Estudante de Ciências da Computação, 
+                    aluna do Instituto Algar e Alura Include,
+                    e futura Software Developer.
+                </p>
+                
+                <div class="links_apresentacao">
+                    <h2 class="titulo_links_redes">Acesse minhas redes:</h2>
+                    <a href="https://github.com/Julyannaalbuquer" class="link_rede" target="_blank"><img src="./assets/github.svg">GitHub</a>
+                    <a href="https://www.linkedin.com/in/julyanna-albuquerque/" class="link_rede" target="_blank"><img src="./assets/linkedin.svg">Linkedin</a>
+                </div>
+            </div>
+
+            <img class="imagem_apresentacao" src="./assets/imagem.svg" alt="Imagem de uma menina usando um computador">
+        </section>
+        
+        <section class="secao_sobre_mim" id="sobre_mim">
+            <div class="titulo_principal_secao">
+                <h1 class="titulo_secao_sobre_mim">Sobre <strong class="destaque_nome">Mim</strong></h1>
+            </div>
+            
+            <div class="conteudo_principal_secao">
+                <img class="conteudo_principal_foto" src="./assets/my_image.svg" alt="Minha Foto">
+        
+                <div class="conteudo_secao_sobre_mim">
+                    <h2 class="titulo_secao_conteudo">Software Developer <br>& IT Support</h2>
+                    <p class="texto_secao_conteudo">
+                        Sou natural de Araguatins, TO, e tenho 20 anos. Atualmente, estou cursando Ciências da Computação na Universidade Católica de Brasília e sou aluna do Instituto Algar e do programa Alura Include. 
+                        Concluí um curso de Suporte de TI oferecido pela Google, o que me proporcionou uma base sólida nessa área.<br>
+
+                        <br>Além da tecnologia, gosto de ler livros, desenhar, ouvir música, assistir a filmes e séries, e tocar instrumentos. 
+                        Desde criança, sou fascinada por tecnologia, o que me impulsionou a buscar constantemente mais conhecimento e aprimoramento.<br>
+
+                        <br>Ao longo dos cursos que fiz, adquiri valiosos conhecimentos e estou sempre disposta a aprender mais. 
+                        Acredito que essa busca contínua por conhecimento me permitirá desenvolver uma compreensão abrangente da área, o que será fundamental profissionalmente no mercado de trabalho.
+                    </p>
+        
+                    <div class="conteiner_habilidades">
+                        <div class="habilidades_flex">
+                            <div class="sistemas_operacionais">
+                                <h4>Sistemas Operacionais que uso:</h4>
+                                <div class="icones_sistemas_operacionais">
+                                    <img src="./assets/windows.png" alt="Windows"/>
+                                    <img src="./assets/linux.png" alt="Linux"/>
+                                </div>
+                            </div>
+                            
+                            <div class="habilidades">
+                                <h4>Skills:</h4>
+                                <div class="icones_habilidades">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-plain.svg"/>
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"/>
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"/>
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="informacao_contato">Para ter mais informações e entrar em contato:</h3>
+                        <button href="certificados.html" class="botao_certificado" id="btn-certificado"><img src="./assets/certificados.svg">Currículo</button>
+                    </div>
+                </div>
+            </div>   
+        </section>        
+    </main>
+
+    <footer class="rodape">
+        <img class="logo_rodape" src="./assets/Logo_Alura_Include.svg" >
+    
+        <div class="autoria_flex">
+            <p class="autoria">&#169; Desenvolvido por Julyanna Albuquerque | 2024</p>
+            <a href="https://www.linkedin.com/in/julyanna-albuquerque/" target="_blank"><img height="20" width="20" src="./assets/icons-linkedin.svg" alt="logo do linkedin"></a>
+            <a href="https://github.com/Julyannaalbuquer" target="_blank"><img height="22" width="22" src="./assets/icon-github.svg" alt="Logo do github"></a>
+        </div>  
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+</html>
