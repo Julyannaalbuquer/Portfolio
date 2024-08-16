@@ -1,3 +1,4 @@
+//Função de baixar arquivos
 document.getElementById('btn-certificado').addEventListener('click', function() {
     const pdfUrl = './assets/Profile.pdf';
 
