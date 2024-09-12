@@ -28,7 +28,7 @@ body {
 }
 
 /* Navbar */
-.navbar {
+.navbar, .navbar_habilidades {
     padding: 10px 10px;
     width: 100%;
     position: fixed;
@@ -99,16 +99,13 @@ body {
     background:#FFFFFF;
 }
 
-.link_menu img {
-    width: 1.6rem;
-}
-
 .menu-hamburger {
     display: none;
     background-color: transparent;
     border: none;
     font-size: 24px;
     cursor: pointer;
+    margin-right: 4%;
     color: #FFFFFF;
 }
 
@@ -131,6 +128,7 @@ body {
     background-color: var(--cor-primaria);
 }
 
+/* Seção apresentação */
 .secao_apresentacao {
     display: flex;
     justify-content: space-between;
@@ -151,6 +149,7 @@ body {
     font-weight: 600;
 }
 
+/* Títulos */
 .conteudo_titulo_apresentacao {
     display: flex;
     justify-content: flex-start;
@@ -203,6 +202,7 @@ body {
     text-decoration: none;
 }
 
+/* Textos */
 .texto_apresentacao, .texto_secao_conteudo, .texto_apresentacao_projetos {
     font-family: var(--fonte-secundaria);
     font-size: 1.5em;
@@ -216,6 +216,7 @@ body {
     margin-left: -10%;
 }
 
+/* Links */
 .link_apresentacao, .projeto_info h4 {
     margin-top: -3%;
     font-family: var(--fonte-primaria);
@@ -334,6 +335,7 @@ body {
     align-items: flex-start;
 }
 
+/* Skills */
 .habilidades_flex {
     display: flex;
     flex-direction: row;
@@ -378,6 +380,7 @@ body {
     width: 1.8rem;
 }
 
+/* Informações de contato */
 .informacao_contato {
     margin-top: 30px;
     font-size: 1.3rem;
@@ -479,9 +482,9 @@ body {
         background-color: var(--cor-primaria);
         position: fixed;
         top: 0;
-        right: -250px; 
+        right: -200px; 
         height: 100%;
-        width: 250px;
+        width: 200px;
         text-align: left;
         padding-top: 60px;
         transition: right 0.3s ease;
@@ -489,11 +492,11 @@ body {
     }
 
     .navbar-lista.open {
-        right: 0; /* Desliza para dentro da tela */
+        right: 0; 
     }
 
     .logo_nome {
-        margin: 2% 0 0 15%;
+        margin: 2% 0 0 10%;
         width: 70%;
     }
 
@@ -519,7 +522,7 @@ body {
         position: fixed;
         top: 20px;
         right: 20px;
-        z-index: 1000; /* Certifica que está acima de outros elementos */
+        z-index: 1000;
     }
 
     .secao_apresentacao {
@@ -542,10 +545,10 @@ body {
     }
 
     .titulo_apresentacao_habilidades, .titulo_apresentacao_projetos {
-        font-size: 0.7rem;
+        font-size: 1rem;
         line-height: 0.9rem;
         margin-top: 20%;
-        margin-bottom: -25%;
+        margin-bottom: -22%;
         letter-spacing: 0.1rem;
     }
 
@@ -681,6 +684,57 @@ body {
         width: 20%;
     }
 
+    .conteudo_principal_habilidades {
+        margin-bottom: 120%;
+    }
+    
+    .conteudo_principal_projetos, .projetos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titulo_apresentacao_projetos {
+        margin-top: 20%;
+        line-height: 90%;
+        font-size: 1.4rem;
+    }
+
+    .texto_apresentacao_projetos {
+        margin-top: 22%;
+        margin-bottom: 1%;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .link_apresentacao {
+        font-size: 0.8rem;
+        margin-bottom: 9%;
+    }
+
+    .projeto_item img, .projetos_item img {
+        width: 95%;
+    }
+
+    .projeto_item img:hover, .projetos_item img:hover {
+        transform: none;
+    }
+
+    .projeto_info {
+        margin-bottom: -30%;
+    }
+    
+    .projeto_info h4 {
+        font-size: 1.27rem;
+        margin-bottom: 5%;
+    }
+
+    .projeto_info p {
+        margin-right: 7%;
+        line-height: 1.6rem;
+        letter-spacing: 0.1rem;
+    }
+    
     .logo_rodape {
         width: 24%;
         margin-bottom: 2%;
@@ -697,45 +751,6 @@ body {
 
     .autoria_flex img {
         width: 70%;   
-    }
-
-    .conteudo_principal_habilidades {
-        margin-bottom: 120%;
-    }
-    
-    .conteudo_principal_projetos, .projetos {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .titulo_apresentacao_projetos {
-        margin-top: 20%;
-        line-height: 90%;
-        font-size: 1.3rem;
-    }
-
-    .texto_apresentacao_projetos {
-        margin-top: 25%;
-        font-size: 0.8rem;
-        line-height: 1rem;
-        letter-spacing: 0.1rem;
-    }
-
-    .link_apresentacao {
-        font-size: 0.7rem;
-        margin-bottom: 10%;
-    }
-
-    .projeto_info {
-       margin-bottom: -30%;
-    }
-
-    .projeto_item img, .projetos_item img {
-        width: 100%;
-    }
-
-    .projeto_item img:hover, .projetos_item img:hover {
-        transform: none;
     }
     
 }
