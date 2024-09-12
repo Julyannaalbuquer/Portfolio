@@ -30,8 +30,3 @@ closeBtn.addEventListener("click", () => {
     navbarList.classList.remove("open");
     closeBtn.style.display = "none"; // Esconde o botão de fechar quando o menu fecha
 });
-
-const statusTexto = document.getElementById('status');
-
-
-
