@@ -7,6 +7,7 @@
     --cor-terciaria: #F5D877;
     --cor-quaternaria: #8A4D41;
     --cor-hover: #201e1e;
+
     --fonte-primaria: "Do Hyeon", sans-serif;
     --fonte-secundaria: "Lato", sans-serif;
 }
@@ -17,51 +18,62 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100vh;
     background-color: var(--cor-quaternaria);
 }
 
-.header, .header_projetos {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    height: 4rem;
+/* Navbar */
+.navbar {
+    padding: 10px 10px;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
     background-color: var(--cor-primaria);
 }
 
-.header_projetos {
-    background-color: var(--cor-quaternaria);
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo_nome, .logo_nome_menor {
+.navbar-lista {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-lista li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.logo_nome {
     margin: 4% 0 0 50%;
     width: 100%;
 }
 
-.navegacao, .navegacao_habilidades {
-    display: flex;
-    gap: 2rem;
-    margin-right: 5%;
-}
-
-.navegacao a, .navegacao_habilidades a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.link_menu {
     font-family: var(--fonte-primaria);
     font-size: 1.3rem;
     font-weight: 400;
     color: var(--cor-terciaria);
     text-decoration: none;
-    letter-spacing: 0.1em;
 }
 
 .link_menu:hover {
     transform: scale(1.06);
     position: relative;
+    color: var(--cor-secundaria);
 }
 
 .link_menu:hover::after {
@@ -69,7 +81,7 @@ body {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-secundaria);
     position: absolute;
     bottom: -7px;
 }
@@ -78,6 +90,25 @@ body {
     width: 1.6rem;
 }
 
+.menu-hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.botao-fechar {
+    display: none; 
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Conteúdo principal */
 .conteudo_principal, .conteudo_principal_habilidades, .conteudo_principal_projetos {
     display: flex;
     flex-direction: column;
@@ -180,48 +211,6 @@ body {
     margin-left: -10%;
 }
 
-.projetos {
-    display: flex;
-    justify-content: center;
-    gap: 1.8rem;
-    margin-left: 6%;
-    margin-top: -6%;
-}
-
-.projeto_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.projeto_item img, .projetos_item img {
-    margin-bottom: 8%;
-    transition: transform 0.3s
-}
-
-.projeto_item img:hover, .projetos_item img:hover {
-    transform: scale(1.04);
-}
-
-.projeto_info {
-    text-align: center;
-}
-
-.projeto_info h4 {
-    font-size: 1.2rem;
-    color: var(--cor-terciaria);
-    margin-bottom: 3%;
-}
-
-.projeto_info p {
-    font-size: 1rem;
-    font-family: var(--fonte-secundaria);
-    font-weight: 400;
-    color: var(--cor-secundaria);
-    margin-bottom: 50%;
-    line-height: 1.3rem;
-}
-
 .links_apresentacao {
     display: flex;
     flex-direction: column;
@@ -268,6 +257,7 @@ body {
     border-radius: 15px;
 }
 
+/* Seção sobre mim */
 .secao_sobre_mim {
     display: flex;
     flex-direction: column;
@@ -387,6 +377,50 @@ body {
     background-color: var(--cor-primaria);
 }
 
+/* Seção projetos */
+.projetos {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-left: 6%;
+    margin-top: -6%;
+}
+
+.projeto_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto_item img, .projetos_item img {
+    margin-bottom: 8%;
+    transition: transform 0.3s
+}
+
+.projeto_item img:hover, .projetos_item img:hover {
+    transform: scale(1.04);
+}
+
+.projeto_info {
+    text-align: center;
+}
+
+.projeto_info h4 {
+    font-size: 1.2rem;
+    color: var(--cor-terciaria);
+    margin-bottom: 3%;
+}
+
+.projeto_info p {
+    font-size: 1rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    color: var(--cor-secundaria);
+    margin-bottom: 50%;
+    line-height: 1.3rem;
+}
+
+/* Rodapé */
 .rodape, .rodape_habilidades {
     display: flex;
     justify-content: center;
@@ -425,49 +459,50 @@ body {
     transform: scale(1.1);
 }
 
-@media (max-width: 1200px) {
-    .header, .header_projetos {
-        display: flex;
-        justify-content: flex-start;
+@media (max-width: 1200px) { 
+    .navbar-lista {
+        display: block;
+        flex-direction: column;
+        background-color: var(--cor-primaria);
         position: fixed;
-        height: 3.4rem;
-    }
-    
-    .logo_nome, .logo_nome_menor {
-        margin: 4% 0 0 25%;
-        width: 75%;
-    }
-
-    .logo_nome_menor {
-        width: 50%;
-        margin-left: 15%;
+        top: 0;
+        right: -250px; 
+        height: 100%;
+        width: 250px;
+        text-align: left;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 999; 
     }
 
-    .navegacao, .navegacao_habilidades {
-        margin-left: 6%;
-        gap: 0.3rem;
+    .navbar-lista.open {
+        right: 0; /* Desliza para dentro da tela */
     }
 
-    .navegacao_habilidades {
-        gap: 0.8rem;
+    .logo_nome {
+        margin: 2% 0 0 15%;
+        width: 70%;
     }
 
-    .navegacao a, .navegacao_habilidades a {
-        gap: 0.2rem;
-        font-size: 0.55rem;
-    }
-
-    .link_menu img {
-        width: 0.5rem;
-    }
-
-    .link_menu:hover {
-        transform: scale(1.03);
+    .navbar-lista li {
+        margin: 20px 0;
+        padding-left: 20px;
     }
 
     .link_menu:hover::after {
-        height: 1.2px;
-        bottom: -2px;
+        width: 0;
+    }
+
+    .menu-hamburger {
+        display: block;
+    }
+
+    .navbar.open + .botao-fechar {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000; /* Certifica que está acima de outros elementos */
     }
 
     .secao_apresentacao {
