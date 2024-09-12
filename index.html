@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#532F28">
     <title>Portfólio</title>
     <link rel="icon" href="./assets/certificados.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body> 
-    <header class="header"> 
-        <a href="index.html"><img class="logo_nome" src="./assets/my_name.svg" alt="Meu nome"></a>  
-        <nav class="navegacao">     
-            <a class="link_menu" href="index.html"><img src="./assets/home.svg" alt="Home">Home</a>
-            <a class="link_menu" href="#sobre_mim"><img src="./assets/sobre_mim.svg" alt="Sobre mim">Sobre Mim</a>
-            <a class="link_menu" href="skills.html"><img src="./assets/habilidades.svg" alt="Habilidades">Habilidades</a>
-            <a class="link_menu" href="projetos.html"><img src="./assets/projetos.svg" alt="Projetos">Projetos</a>
+    <header> 
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="index.html"><img class="logo_nome" src="./assets/my_name.svg" alt="Meu nome"></a> 
+                </div>
+                <ul class="navbar-lista" id="navbar-list">
+                    <li class="fechar-menu">
+                        <button class="botao-fechar" id="close-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </li>
+                    <li><a class="link_menu" href="index.html">Home</a></li>
+                    <li><a class="link_menu" href="#sobre_mim">Sobre Mim</a></li>
+                    <li><a class="link_menu" href="skills.html">Habilidades</a></li>
+                    <li><a class="link_menu" href="projetos.html">Projetos</a></li>
+                </ul>
+                <button class="menu-hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -105,6 +121,7 @@
             <a href="https://github.com/Julyannaalbuquer" target="_blank"><img height="22" width="22" src="./assets/icon-github.svg" alt="Logo do github"></a>
         </div>  
     </footer>
+    
     <script src="main.js" defer></script>
 </body>
 </html>
