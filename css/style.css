@@ -68,6 +68,7 @@ body {
     font-weight: 400;
     color: var(--cor-terciaria);
     text-decoration: none;
+    transition:color .2s ease;
 }
 
 .link_menu:hover {
@@ -76,14 +77,26 @@ body {
     color: var(--cor-secundaria);
 }
 
-.link_menu:hover::after {
-    content: "";
-    display: block;
+.link_menu:hover::after, .link_menu:hover::before {
     width: 100%;
-    height: 3px;
+    left: 0;
+}
+
+.link_menu::after, .link_menu::before {
+    content: "";
+    top:calc(100% + 5px);
+    width:0;
+    right:0;
+    height:3px;
     background-color: var(--cor-secundaria);
     position: absolute;
-    bottom: -7px;
+}
+
+.link_menu::after {
+    -webkit-transition:width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+    -o-transition:width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+    transition:width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+    background:#FFFFFF;
 }
 
 .link_menu img {
@@ -489,7 +502,11 @@ body {
         padding-left: 20px;
     }
 
-    .link_menu:hover::after {
+    .link_menu::after {
+        transition: none;
+    }
+
+    .link_menu:hover:after, .link_menu:hover::before{
         width: 0;
     }
 
@@ -516,11 +533,11 @@ body {
 
     .titulo_cumprimento{
         margin-top: -30%;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .titulo_apresentacao {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         letter-spacing: 0.2rem;
     }
 
@@ -534,9 +551,9 @@ body {
 
     @keyframes typing {
         0% { width: 0; }
-        25% { width: 50%; }
-        50% { width: 100%; }
-        75% { width: 100%; }
+        25% { width: 25%; }
+        50% { width: 78%; }
+        70% { width: 78%; }
         100% { width: 0; }
     }
     
@@ -546,28 +563,28 @@ body {
     }
 
     .texto_apresentacao {
-        font-size: 1.1rem;
-        line-height: 1.7rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
     }
 
     .links_apresentacao {
         gap: 1rem;
-        margin-left: -2%;
+        margin-left: 10%;
+    }
+
+    .titulo_links_redes {
+        font-size: 1.2rem;
     }
 
     .links_apresentacao a {
         width: 90%;
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 0.2rem;
     }
 
     .links_apresentacao img {
-        width: 18%;
+        width: 15%;
         margin-right: -4%;
-    }
-
-    .titulo_links_redes {
-        font-size: 1rem;
     }
 
     .conteudo_principal_secao {
@@ -577,7 +594,7 @@ body {
     }
 
     .titulo_secao_sobre_mim {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         letter-spacing: 0.2rem;
         margin-bottom: 10%;
     }
@@ -588,15 +605,15 @@ body {
     }
 
     .titulo_secao_conteudo {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         letter-spacing: 0.2rem;
-        line-height: 1.3rem;
+        line-height: 1.5rem;
         margin-top: 10%;
     }
 
     .texto_secao_conteudo {
-        font-size: 1rem;
-        line-height: 1.3rem;
+        font-size: 1.12rem;
+        line-height: 1.35rem;
     }
 
     .habilidades_flex {
@@ -607,18 +624,31 @@ body {
     .icones_habilidades, .icones_sistemas_operacionais {
         display: flex;
         justify-content: center;
+        margin-bottom: 5%;
     }
 
     .icones_sistemas_operacionais {
+        width: 90%;
         margin-right: 15%;
     }
 
+    .icones_sistemas_operacionais img {
+       margin-right: -1%;
+    }
+
     .sistemas_operacionais h4, .habilidades h4{
-        font-size: 1rem;
+        font-size: 1.13rem;
+        margin-right: 9%;
+    }
+
+    .habilidades h4 {
+        font-size: 1.18rem;
+        margin-left: 10%;
+        margin-top: 3%;
     }
 
     .icones_sistemas_operacionais img {
-        width: 14%;
+        width: 15.5%;
     }
 
     .habilidades {
@@ -628,30 +658,32 @@ body {
     }
 
     .icones_habilidades img {
-        width: 12%;
+        width: 13%;
     }
 
     .informacao_contato {
-        font-size: 1rem;
+        font-size: 1.17rem;
         letter-spacing: 0.01rem;
         line-height: 1.5rem;
         margin-right: 8%;
+        margin-top: -0.1%;
     }
 
     .botao_certificado {
         margin-top: 6%;
-        margin-left: 15%;
-        font-size: 1rem;
-        width:60%;
+        margin-left: 18%;
+        font-size: 1.14rem;
+        width: 55%;
     }
     
     .botao_certificado img {
         margin-right: -4%;
-        width: 25%;
+        width: 20%;
     }
 
     .logo_rodape {
         width: 24%;
+        margin-bottom: 2%;
     }
 
     .autoria_flex {
@@ -659,7 +691,7 @@ body {
     }
 
     .autoria {
-        font-size: 0.55rem;
+        font-size: 0.8rem;
         line-height: 1rem;
     }
 
