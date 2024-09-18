@@ -30,7 +30,7 @@ document.addEventListener("click", function(event) {
 
 // Função baixar currículo em PDF
 document.getElementById('btn-curriculo').addEventListener('click', function() {
-    const pdfUrl = './assets/Profile.pdf';
+    const pdfUrl = './assets/Currículo.pdf';
 
     const a = document.createElement('a');
     a.href = pdfUrl;
